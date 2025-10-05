@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": false,
@@ -27,17 +31,32 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["vite/client"],
+    "types": [
+      "vite/client"
+    ],
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "shared/*": ["src/6_shared/*"],
-      "page/*": ["src/2_pages/*"],
-      "widget/*": ["src/3_widgets/*"],
-      "feature/*": ["src/4_features/*"]
+      "shared/*": [
+        "src/6_shared/*"
+      ],
+      "page/*": [
+        "src/2_pages/*"
+      ],
+      "widget/*": [
+        "src/3_widgets/*"
+      ],
+      "feature/*": [
+        "src/4_features/*"
+      ],
+      "entity/*": [
+        "src/5_entities/*"
+      ]
     }
   },
-  "include": ["./src"],
+  "include": [
+    "./src"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
