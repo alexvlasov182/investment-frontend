@@ -29,7 +29,13 @@
     "noEmit": true,
     "types": ["vite/client"],
     "jsx": "react-jsx",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "shared/*": ["src/6_shared/*"],
+      "page/*": ["src/2_pages/*"],
+      "widget/*": ["src/3_widgets/*"],
+      "feature/*": ["src/4_features/*"]
+    }
   },
   "include": ["./src"],
   "references": [
