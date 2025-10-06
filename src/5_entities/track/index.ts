@@ -1,2 +1,2 @@
-export { default as Track } from './Track'
-export * as track from './model'
+export { default as TrackCard } from './TrackCard';
+export * as track from './model';

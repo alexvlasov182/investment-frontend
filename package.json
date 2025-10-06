@@ -19,6 +19,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^6.1.1",
+    "fuse.js": "^7.1.0",
     "lucide-react": "^0.544.0",
     "nanostores": "^1.0.1",
     "react": "^19.2.0",
