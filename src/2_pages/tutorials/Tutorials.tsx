@@ -2,11 +2,11 @@ import { useStore } from '@nanostores/react';
 import { Header } from 'widget/header';
 import { $tutorials } from './model';
 import { TrackCard } from 'entity/track';
-import { tutorialsSearch, TutorialsSearch } from 'feature/tutorialsSearch';
+import { TutorialsSearch } from 'feature/tutorialsSearch';
+import NoTracks from './ui/NoTracks';
 
 export default function Tutorials() {
   const tutorials = useStore($tutorials);
-  const applySearch = useStore(tutorialsSearch.$applySearch);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors">
@@ -29,10 +29,11 @@ export default function Tutorials() {
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                      transition-all"
         >
-          {applySearch(tutorials).map((tutorial) => (
+          {tutorials.map((tutorial) => (
             <TrackCard key={tutorial.id} track={tutorial} />
           ))}
         </div>
+        {!tutorials.length && <NoTracks />}
       </main>
     </div>
   );

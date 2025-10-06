@@ -1,5 +1,6 @@
 import { TTrack } from 'entity/track/model';
-import { atom } from 'nanostores';
+import { $applySearch } from 'feature/tutorialsSearch/model';
+import { computed } from 'nanostores';
 
 const tutorials = [
   {
@@ -56,4 +57,6 @@ const tutorials = [
   },
 ];
 
-export const $tutorials = atom<TTrack[]>(tutorials);
+export const $tutorials = computed($applySearch, (applySearch) => {
+  return applySearch(tutorials as TTrack[]);
+});

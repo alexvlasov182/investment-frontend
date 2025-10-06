@@ -5,15 +5,4 @@
   --font-family-mono: 'Source Code Pro', ui-monospace, monospace;
 }
 
-@layer base {
-  body {
-    background-color: white;
-    color: rgb(17 24 39);
-    font-family: var(--font-family-sans);
-  }
-
-  .dark {
-    background-color: rgb(31 41 55);
-    color: rgb(243 244 246);
-  }
-}
+@variant dark (&:where(.dark, .dark *));
